@@ -33,9 +33,11 @@
           <div style="display: flex; flex-direction: column">
             <h3>{{ project.title }}</h3>
             <div>
-              <p *ngFor="let technology of project.technologies">
-                {{ technology }}
-              </p>
+              <ul>
+                <li *ngFor="let technology of project.technologies">
+                  {{ technology }}
+                </li>
+              </ul>
             </div>
           </div>
           <p style="font-color: lightgray; font-size: 10px">

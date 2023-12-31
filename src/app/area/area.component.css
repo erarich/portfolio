@@ -61,6 +61,11 @@
   width: 100%;
 }
 
+.area-list__item:hover {
+  cursor: pointer;
+  box-shadow: 7px 7px 10px lightgray;
+}
+
 .area-list__item-info {
   display: flex;
   flex-direction: column;
