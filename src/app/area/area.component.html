@@ -5,7 +5,7 @@
     <mat-divider></mat-divider>
     <div class="area-container__filter">
       <div style="display: flex; flex-direction: row; gap: 20px">
-        <mat-select [(value)]="modeSelect" placeholder="Order by: ">
+        <mat-select [(value)]="modeSelect" placeholder="Order by">
           <mat-option [value]="value">Relevant</mat-option>
         </mat-select>
         <mat-select [(value)]="modeSelect" placeholder="Language">
@@ -15,12 +15,10 @@
           <mat-option [value]="value">Relevant</mat-option>
         </mat-select>
       </div>
-      <div class="area-container__filter-view-options">
-        <div><mat-icon>list</mat-icon></div>
-        <mat-divider [vertical]="true"></mat-divider>
-        <div><mat-icon class="white-icon">grid_on</mat-icon></div>
-        <mat-divider [vertical]="true"></mat-divider>
-        <div><mat-icon class="white-icon">table_chart</mat-icon></div>
+      <div>
+        <mat-select [(value)]="modeSelect" placeholder="View">
+          <mat-option [value]="value">Relevant</mat-option>
+        </mat-select>
       </div>
     </div>
   </div>
