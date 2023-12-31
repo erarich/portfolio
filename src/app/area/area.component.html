@@ -1,0 +1,70 @@
+<main class="area-container">
+  <div class="area-container__header">
+    <h2>{{ areaType }}</h2>
+    <p>{{ jsonData.length }} projects.</p>
+    <mat-divider></mat-divider>
+    <div class="area-container__filter">
+      <div style="display: flex; flex-direction: row; gap: 20px">
+        <mat-select [(value)]="modeSelect" placeholder="Order by: ">
+          <mat-option [value]="value">Relevant</mat-option>
+        </mat-select>
+        <mat-select [(value)]="modeSelect" placeholder="Language">
+          <mat-option [value]="value">Relevant</mat-option>
+        </mat-select>
+        <mat-select [(value)]="modeSelect" placeholder="Framework">
+          <mat-option [value]="value">Relevant</mat-option>
+        </mat-select>
+      </div>
+      <div class="area-container__filter-view-options">
+        <div><mat-icon>list</mat-icon></div>
+        <mat-divider [vertical]="true"></mat-divider>
+        <div><mat-icon class="white-icon">grid_on</mat-icon></div>
+        <mat-divider [vertical]="true"></mat-divider>
+        <div><mat-icon class="white-icon">table_chart</mat-icon></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="area-list">
+    <div class="area-list__item" *ngFor="let project of jsonData">
+      <div class="area-list__item-image-container">
+        <img [src]="project.image" alt="Project Image" />
+      </div>
+      <div class="area-list__item-container">
+        <div class="area-list__item-info">
+          <div style="display: flex; flex-direction: column">
+            <h3>{{ project.title }}</h3>
+            <div>
+              <p *ngFor="let technology of project.technologies">
+                {{ technology }}
+              </p>
+            </div>
+          </div>
+          <p style="font-color: lightgray; font-size: 10px">
+            {{ project.date }}
+          </p>
+        </div>
+        <div class="area-list__item-buttons">
+          <button
+            mat-fab
+            extended
+            (click)="redirectToGitHub(project.github)"
+            color="primary"
+          >
+            <mat-icon>code</mat-icon>
+            GitHub
+          </button>
+          <button
+            mat-fab
+            extended
+            (click)="redirectToDemo(project.demo)"
+            color="primary"
+          >
+            <mat-icon>link</mat-icon>
+            Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
