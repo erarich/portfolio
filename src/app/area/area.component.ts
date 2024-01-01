@@ -13,6 +13,26 @@ export class AreaComponent implements OnInit {
   value: any;
   modeSelect: any;
 
+  sort: string[] = ['Last Updated', 'Name', 'Last Created', 'First Created'];
+
+  language: string[] = [
+    'Python',
+    'JavaScript',
+    'TypeScript',
+    'HTML',
+    'CSS',
+    'GDScript',
+  ];
+
+  framework: string[] = [
+    'React',
+    'Angular',
+    'Godot',
+    'Angular',
+    'Streamlit',
+    'Express',
+  ];
+
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit(): void {

@@ -7,6 +7,7 @@
     "github": "https://github.com/yourusername/responsive-website",
     "demo": "https://www.example.com/responsive-website-demo",
     "date": "2023/12/28",
+    "image": "../assets/responsive.jpg",
     "last-commit": "2023/12/28"
   },
   {
@@ -17,6 +18,7 @@
     "github": "https://github.com/yourusername/react-task-tracker",
     "demo": "https://www.example.com/react-task-tracker-demo",
     "date": "2023/12/28",
+    "image": "../assets/task.png",
     "last-commit": "2023/12/28"
   },
   {
@@ -27,6 +29,7 @@
     "github": "https://github.com/yourusername/portfolio-website",
     "demo": "https://www.example.com/portfolio-website",
     "date": "2023/12/28",
+    "image": "../assets/portfolio.png",
     "last-commit": "2023/12/28"
   }
 ]
