@@ -40,9 +40,16 @@ export class AreaComponent implements OnInit {
   frameworkSelect!: string;
   viewSelect!: string;
 
+  listView: boolean = false;
+  tableView: boolean = false;
+  gridView: boolean = false;
+
+  teste: boolean = false;
+
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit(): void {
+    this.onViewSelectChange();
     this.route.params.subscribe((params) => {
       this.areaType = params['type'];
 
@@ -71,5 +78,31 @@ export class AreaComponent implements OnInit {
 
   loadAreaData() {
     console.log('Carregando dados para a área: ', this.areaType);
+  }
+
+  onViewSelectChange() {
+    console.log(this.viewSelect);
+    switch (this.viewSelect) {
+      case 'List':
+        this.listView = true;
+        this.tableView = false;
+        this.gridView = false;
+        break;
+      case 'Table':
+        this.listView = false;
+        this.tableView = true;
+        this.gridView = false;
+        break;
+      case 'Grid':
+        this.listView = false;
+        this.tableView = false;
+        this.gridView = true;
+        break;
+      default:
+        this.listView = true; // Defina um padrão, por exemplo, para 'List'
+        this.tableView = false;
+        this.gridView = false;
+        break;
+    }
   }
 }

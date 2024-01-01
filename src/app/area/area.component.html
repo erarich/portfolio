@@ -26,7 +26,11 @@
         </mat-select>
       </div>
       <div>
-        <mat-select [(value)]="viewSelect" placeholder="View">
+        <mat-select
+          [(value)]="viewSelect"
+          (ngModelChange)="onViewSelectChange()"
+          placeholder="View"
+        >
           <mat-option *ngFor="let option of viewOptions" [value]="option">{{
             option
           }}</mat-option>
@@ -35,7 +39,7 @@
     </div>
   </div>
 
-  <section class="area-list">
+  <section class="area-list" *ngIf="listView">
     <div
       routerLink="/project/1"
       class="area-list__item"
@@ -94,4 +98,14 @@
       </div>
     </div>
   </section>
+
+  <section class="area-table" *ngIf="tableView">
+    <p>Table View</p>
+  </section>
+
+  <section class="area-grid" *ngIf="gridView">
+    <p>Grid View</p>
+  </section>
+
+  <h2 *ngIf="teste">TESTE</h2>
 </main>
