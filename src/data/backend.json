@@ -6,7 +6,8 @@
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/yourusername/responsive-website",
     "demo": "https://www.example.com/responsive-website-demo",
-    "date": "2023/12/28"
+    "date": "2023/12/28",
+    "last-commit": "2023/12/28"
   },
   {
     "title": "React Task Tracker",
@@ -15,7 +16,8 @@
     "technologies": ["React", "JavaScript", "CSS"],
     "github": "https://github.com/yourusername/react-task-tracker",
     "demo": "https://www.example.com/react-task-tracker-demo",
-    "date": "2023/12/28"
+    "date": "2023/12/28",
+    "last-commit": "2023/12/28"
   },
   {
     "title": "Portfolio Website",
@@ -24,6 +26,7 @@
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/yourusername/portfolio-website",
     "demo": "https://www.example.com/portfolio-website",
-    "date": "2023/12/28"
+    "date": "2023/12/28",
+    "last-commit": "2023/12/28"
   }
 ]
