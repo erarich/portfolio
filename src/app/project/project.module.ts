@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import { AreaComponent } from './area.component';
+import { ProjectComponent } from './project.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSelectModule } from '@angular/material/select';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 @NgModule({
-  declarations: [AreaComponent],
+  declarations: [ProjectComponent],
   imports: [
     CommonModule,
     HttpClientModule,
@@ -18,10 +17,7 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
     MatIconModule,
     MatDividerModule,
     MatSelectModule,
-    RouterOutlet,
-    RouterLink,
-    RouterLinkActive,
   ],
-  exports: [AreaComponent],
+  exports: [ProjectComponent],
 })
-export class AreaModule {}
+export class ProjectModule {}

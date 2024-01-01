@@ -18,7 +18,7 @@ export const routes: Routes = [
   {
     path: 'project/:id',
     component: ProjectComponent,
-    canActivate: [projectGuard],
+    // canActivate: [projectGuard],
     data: {
       router: Router,
     },
