@@ -26,8 +26,10 @@
         </mat-select>
       </div>
       <div>
-        <mat-select [(value)]="modeSelect" placeholder="View">
-          <mat-option [value]="value">Relevant</mat-option>
+        <mat-select [(value)]="viewSelect" placeholder="View">
+          <mat-option *ngFor="let option of viewOptions" [value]="option">{{
+            option
+          }}</mat-option>
         </mat-select>
       </div>
     </div>

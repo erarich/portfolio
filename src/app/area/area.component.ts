@@ -33,9 +33,12 @@ export class AreaComponent implements OnInit {
     'Express',
   ];
 
+  viewOptions: string[] = ['List', 'Grid', 'Table'];
+
   sortSelect!: string;
   languageSelect!: string;
   frameworkSelect!: string;
+  viewSelect!: string;
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
