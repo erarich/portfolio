@@ -33,6 +33,10 @@ export class AreaComponent implements OnInit {
     'Express',
   ];
 
+  sortSelect!: string;
+  languageSelect!: string;
+  frameworkSelect!: string;
+
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit(): void {

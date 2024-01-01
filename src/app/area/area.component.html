@@ -5,14 +5,24 @@
     <mat-divider></mat-divider>
     <div class="area-container__filter">
       <div style="display: flex; flex-direction: row; gap: 20px">
-        <mat-select [(value)]="modeSelect" placeholder="Sort">
-          <mat-option [value]="value">Relevant</mat-option>
+        <mat-select [(value)]="sortSelect" placeholder="Sort">
+          <mat-option *ngFor="let option of sort" [value]="option">{{
+            option
+          }}</mat-option>
         </mat-select>
-        <mat-select [(value)]="modeSelect" placeholder="Language">
-          <mat-option [value]="value">Relevant</mat-option>
+        <mat-select [(value)]="languageSelect" placeholder="Language" multiple>
+          <mat-option *ngFor="let option of language" [value]="option">{{
+            option
+          }}</mat-option>
         </mat-select>
-        <mat-select [(value)]="modeSelect" placeholder="Framework">
-          <mat-option [value]="value">Relevant</mat-option>
+        <mat-select
+          [(value)]="frameworkSelect"
+          placeholder="Framework"
+          multiple
+        >
+          <mat-option *ngFor="let option of framework" [value]="option">{{
+            option
+          }}</mat-option>
         </mat-select>
       </div>
       <div>
