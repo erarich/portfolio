@@ -28,7 +28,7 @@
       <div>
         <mat-select
           [(value)]="viewSelect"
-          (ngModelChange)="onViewSelectChange()"
+          (selectionChange)="onViewSelectChange()"
           placeholder="View"
         >
           <mat-option *ngFor="let option of viewOptions" [value]="option">{{

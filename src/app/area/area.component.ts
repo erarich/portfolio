@@ -38,7 +38,7 @@ export class AreaComponent implements OnInit {
   sortSelect!: string;
   languageSelect!: string;
   frameworkSelect!: string;
-  viewSelect!: string;
+  viewSelect: string = 'List';
 
   listView: boolean = false;
   tableView: boolean = false;
@@ -66,6 +66,8 @@ export class AreaComponent implements OnInit {
         }
       );
     });
+
+    console.log('Initial viewSelect value:', this.viewSelect);
   }
 
   redirectToGitHub(githubLink: string): void {
@@ -81,7 +83,7 @@ export class AreaComponent implements OnInit {
   }
 
   onViewSelectChange() {
-    console.log(this.viewSelect);
+    console.log('---------------->>> Change: ', this.viewSelect);
     switch (this.viewSelect) {
       case 'List':
         this.listView = true;
