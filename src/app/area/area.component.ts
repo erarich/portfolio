@@ -34,7 +34,13 @@ export class AreaComponent implements OnInit {
   value: any;
   modeSelect: any;
 
-  sort: string[] = ['Last Updated', 'Name', 'Last Created', 'First Created'];
+  sort: string[] = [
+    'Last Updated',
+    'Name',
+    'Last Created',
+    'Last Commit',
+    'First Created',
+  ];
 
   language: string[] = [
     'Python',
@@ -70,7 +76,8 @@ export class AreaComponent implements OnInit {
   displayedColumns: string[] = [
     'title',
     'technologies',
-    'date',
+    'created_at',
+    'last_commit',
     'github',
     'demo',
   ];

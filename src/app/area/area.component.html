@@ -65,13 +65,13 @@
               <span style="font-weight: bold; font-size: 12px"
                 >Created at:</span
               >
-              {{ project.date }}
+              {{ project.created_at }}
             </p>
             <p style="font-color: lightgray; font-size: 10px">
               <span style="font-weight: bold; font-size: 12px"
                 >Last commit:</span
               >
-              {{ project.date }}
+              {{ project.created_at }}
             </p>
           </div>
         </div>
@@ -119,9 +119,14 @@
         </td>
       </ng-container>
 
-      <ng-container matColumnDef="date">
-        <th mat-header-cell *matHeaderCellDef>Date</th>
-        <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+      <ng-container matColumnDef="created_at">
+        <th mat-header-cell *matHeaderCellDef>Created At</th>
+        <td mat-cell *matCellDef="let element">{{ element.created_at }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="last_commit">
+        <th mat-header-cell *matHeaderCellDef>Last Commit</th>
+        <td mat-cell *matCellDef="let element">{{ element.last_commit }}</td>
       </ng-container>
 
       <ng-container matColumnDef="github">
