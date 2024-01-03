@@ -111,7 +111,7 @@
       <ng-container matColumnDef="technologies">
         <th mat-header-cell *matHeaderCellDef>Technologies</th>
         <td mat-cell *matCellDef="let element">
-          <ul>
+          <ul style="padding: 10px">
             <li *ngFor="let technology of element.technologies">
               {{ technology }}
             </li>
