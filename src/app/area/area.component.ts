@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { MatTableDataSource } from '@angular/material/table';
 
 export interface PeriodicElement {
   name: string;
@@ -66,6 +67,15 @@ export class AreaComponent implements OnInit {
 
   teste: boolean = false;
 
+  displayedColumns: string[] = [
+    'title',
+    'technologies',
+    'date',
+    'github',
+    'demo',
+  ];
+  dataSource = new MatTableDataSource<any>([]);
+
   constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -80,6 +90,7 @@ export class AreaComponent implements OnInit {
       this.http.get(jsonFilePath).subscribe(
         (data: any) => {
           this.jsonData = data;
+          this.dataSource.data = this.jsonData;
         },
         (error) => {
           console.error('Error fetching JSON:', error);
@@ -127,7 +138,4 @@ export class AreaComponent implements OnInit {
         break;
     }
   }
-
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
 }
