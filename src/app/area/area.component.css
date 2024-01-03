@@ -119,3 +119,10 @@
 .white-icon svg {
   fill: #3f51b5;
 }
+
+.area-table {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
