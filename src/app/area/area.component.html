@@ -10,7 +10,12 @@
             option
           }}</mat-option>
         </mat-select>
-        <mat-select [(value)]="languageSelect" placeholder="Language" multiple>
+        <mat-select
+          [(value)]="languageSelect"
+          (selectionChange)="onFilterChange()"
+          placeholder="Language"
+          multiple
+        >
           <mat-option *ngFor="let option of language" [value]="option">{{
             option
           }}</mat-option>
@@ -18,6 +23,7 @@
         <mat-select
           [(value)]="frameworkSelect"
           placeholder="Framework"
+          (selectionChange)="onFilterChange()"
           multiple
         >
           <mat-option *ngFor="let option of framework" [value]="option">{{

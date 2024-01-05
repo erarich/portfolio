@@ -50,10 +50,10 @@ export class AreaComponent implements OnInit {
   viewOptions: string[] = ['List', 'Grid', 'Table'];
 
   sortSelect!: string;
-  languageSelect!: string;
-  frameworkSelect!: string;
+  languageSelect: any[] = [];
+  frameworkSelect: any[] = [];
   viewSelect: string = 'List';
-
+  filteredData: any[] = [];
   listView: boolean = false;
   tableView: boolean = false;
   gridView: boolean = false;
@@ -105,6 +105,28 @@ export class AreaComponent implements OnInit {
 
   loadAreaData() {
     console.log('Carregando dados para a área: ', this.areaType);
+  }
+
+  filterProjects() {
+    // Filter projects based on selected language and framework
+    this.filteredData = this.jsonData.filter((project: any) => {
+      const hasSelectedLanguage =
+        this.languageSelect.length === 0 ||
+        this.languageSelect.some((lang: string) =>
+          project.technologies.includes(lang)
+        );
+      const hasSelectedFramework =
+        this.frameworkSelect.length === 0 ||
+        this.frameworkSelect.some((framework: string) =>
+          project.technologies.includes(framework)
+        );
+
+      return hasSelectedLanguage && hasSelectedFramework;
+    });
+  }
+
+  onFilterChange() {
+    this.filterProjects();
   }
 
   onViewSelectChange() {
