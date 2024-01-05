@@ -9,6 +9,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatSelectModule } from '@angular/material/select';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { MatTableModule } from '@angular/material/table';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [AreaComponent],
@@ -23,6 +24,7 @@ import { MatTableModule } from '@angular/material/table';
     RouterLink,
     RouterLinkActive,
     MatTableModule,
+    MatGridListModule,
   ],
   exports: [AreaComponent],
 })

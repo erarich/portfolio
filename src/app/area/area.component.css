@@ -130,3 +130,7 @@
 .area-table td:hover {
   background-color: lightgray;
 }
+
+mat-grid-tile {
+  background: lightblue;
+}
