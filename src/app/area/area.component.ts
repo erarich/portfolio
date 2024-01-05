@@ -52,7 +52,7 @@ export class AreaComponent implements OnInit {
   sortSelect!: string;
   languageSelect!: string;
   frameworkSelect!: string;
-  viewSelect: string = 'List';
+  viewSelect: string = 'Grid';
 
   listView: boolean = false;
   tableView: boolean = false;
