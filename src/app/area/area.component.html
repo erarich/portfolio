@@ -167,23 +167,41 @@
           <div class="area-grid__item-info">
             <div style="display: flex; flex-direction: column">
               <h3>{{ project.title }}</h3>
-              <div>
-                <ul>
-                  <li *ngFor="let technology of project.technologies">
-                    {{ technology }}
-                  </li>
-                </ul>
+              <div
+                style="
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-content: center;
+                  text-align: center;
+                  justify-content: center;
+                "
+              >
+                <p
+                  style="margin-right: 10px; font-size: 12px"
+                  *ngFor="let technology of project.technologies"
+                >
+                  {{ technology }}
+                </p>
               </div>
             </div>
-            <div>
-              <p style="font-color: lightgray; font-size: 10px">
-                <span style="font-weight: bold; font-size: 12px"
+            <div
+              style="
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                align-content: center;
+                justify-content: space-between;
+                padding: 5px;
+              "
+            >
+              <p style="font-color: lightgray; font-size: 8px">
+                <span style="font-weight: bold; font-size: 10px"
                   >Created at:</span
                 >
                 {{ project.created_at }}
               </p>
-              <p style="font-color: lightgray; font-size: 10px">
-                <span style="font-weight: bold; font-size: 12px"
+              <p style="font-color: lightgray; font-size: 8px">
+                <span style="font-weight: bold; font-size: 10px"
                   >Last commit:</span
                 >
                 {{ project.last_commit }}

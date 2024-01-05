@@ -34,5 +34,41 @@
     "created_at": "2023/12/28",
     "image": "../assets/portfolio.png",
     "last_commit": "2023/12/28"
+  },
+  {
+    "id": 4,
+    "title": "Responsive Website",
+    "category": "frontend",
+    "description": "Developed a responsive website using HTML, CSS, and JavaScript.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/yourusername/responsive-website",
+    "demo": "https://www.example.com/responsive-website-demo",
+    "created_at": "2023/12/28",
+    "image": "../assets/responsive.jpg",
+    "last_commit": "2023/12/28"
+  },
+  {
+    "id": 5,
+    "title": "React Task Tracker",
+    "category": "frontend",
+    "description": "Built a task tracker app using React for better task management.",
+    "technologies": ["React", "JavaScript", "CSS"],
+    "github": "https://github.com/yourusername/react-task-tracker",
+    "demo": "https://www.example.com/react-task-tracker-demo",
+    "created_at": "2023/12/28",
+    "image": "../assets/task.png",
+    "last_commit": "2023/12/28"
+  },
+  {
+    "id": 6,
+    "title": "Portfolio Website",
+    "category": "frontend",
+    "description": "Created a personal portfolio website to showcase skills and projects.",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/yourusername/portfolio-website",
+    "demo": "https://www.example.com/portfolio-website",
+    "created_at": "2023/12/28",
+    "image": "../assets/portfolio.png",
+    "last_commit": "2023/12/28"
   }
 ]
