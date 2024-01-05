@@ -22,11 +22,11 @@ export class AreaComponent implements OnInit {
   modeSelect: any;
 
   sort: string[] = [
-    'Last Updated',
+    'Id',
     'Name',
-    'Last Created',
-    'Last Commit',
-    'First Created',
+    'Last Created (todo)',
+    'Last Commit (todo)',
+    'First Created (todo)',
   ];
 
   language: string[] = [
