@@ -127,8 +127,9 @@
   margin-top: 40px;
 }
 
-.area-table td:hover {
+.area-table tr:hover {
   background-color: lightgray;
+  cursor: pointer;
 }
 
 .area-grid {

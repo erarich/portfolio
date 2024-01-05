@@ -77,22 +77,21 @@ export class AreaComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.areaType = params['type'];
 
-      this.loadAreaData();
-
       const jsonFilePath = `../../data/${this.areaType}.json`;
 
       this.http.get(jsonFilePath).subscribe(
         (data: any) => {
           this.jsonData = data;
           this.dataSource.data = this.jsonData;
+
+          console.log('-------------------DEBUG: this.jsonData');
+          console.log(this.jsonData);
         },
         (error) => {
           console.error('Error fetching JSON:', error);
         }
       );
     });
-
-    console.log('Initial viewSelect value:', this.viewSelect);
   }
 
   redirectToGitHub(githubLink: string): void {
@@ -130,7 +129,6 @@ export class AreaComponent implements OnInit {
   }
 
   onViewSelectChange() {
-    console.log('---------------->>> Change: ', this.viewSelect);
     switch (this.viewSelect) {
       case 'List':
         this.listView = true;
