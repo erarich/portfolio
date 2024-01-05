@@ -131,6 +131,14 @@
   background-color: lightgray;
 }
 
-mat-grid-tile {
+/* mat-grid-tile {
   background: lightblue;
+} */
+
+.area-grid__item-buttons {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: space-between;
+  height: 60%;
 }

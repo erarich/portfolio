@@ -155,12 +155,65 @@
   </section>
 
   <section class="area-grid" *ngIf="gridView">
-    <p>Grid View</p>
-    <mat-grid-list cols="3" rowHeight="2:1">
-      <mat-grid-tile>1</mat-grid-tile>
-      <mat-grid-tile>2</mat-grid-tile>
-      <mat-grid-tile>3</mat-grid-tile>
-      <mat-grid-tile>4</mat-grid-tile>
+    <mat-grid-list cols="3" rowHeight="1:1">
+      <mat-grid-tile
+        *ngFor="let project of jsonData"
+        [routerLink]="['/project', project.id]"
+      >
+        <div class="area-list__item">
+          <div class="area-list__item-image-container">
+            <img [src]="project.image" alt="Project Image" />
+          </div>
+          <div class="area-list__item-container">
+            <div class="area-list__item-info">
+              <div style="display: flex; flex-direction: column">
+                <h3>{{ project.title }}</h3>
+                <div>
+                  <ul>
+                    <li *ngFor="let technology of project.technologies">
+                      {{ technology }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+                <p style="font-color: lightgray; font-size: 10px">
+                  <span style="font-weight: bold; font-size: 12px"
+                    >Created at:</span
+                  >
+                  {{ project.created_at }}
+                </p>
+                <p style="font-color: lightgray; font-size: 10px">
+                  <span style="font-weight: bold; font-size: 12px"
+                    >Last commit:</span
+                  >
+                  {{ project.last_commit }}
+                </p>
+              </div>
+            </div>
+            <div class="area-grid__item-buttons">
+              <button
+                mat-fab
+                extended
+                (click)="redirectToGitHub(project.github)"
+                color="primary"
+              >
+                <mat-icon>code</mat-icon>
+                GitHub
+              </button>
+              <button
+                mat-fab
+                extended
+                (click)="redirectToDemo(project.demo)"
+                color="primary"
+              >
+                <mat-icon>link</mat-icon>
+                Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </mat-grid-tile>
     </mat-grid-list>
   </section>
 
