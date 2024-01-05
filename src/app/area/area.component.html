@@ -47,7 +47,7 @@
 
   <section class="area-list" *ngIf="listView">
     <div
-      routerLink="/project/1"
+      [routerLink]="['/project', project.id]"
       class="area-list__item"
       *ngFor="let project of jsonData"
     >
