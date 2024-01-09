@@ -3,13 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource } from '@angular/material/table';
 
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
 @Component({
   selector: 'app-area',
   templateUrl: './area.component.html',
@@ -28,14 +21,6 @@ export class AreaComponent implements OnInit {
   tableView: boolean = false;
   gridView: boolean = false;
 
-  displayedColumns: string[] = [
-    'title',
-    'technologies',
-    'created_at',
-    'last_commit',
-    'github',
-    'demo',
-  ];
   dataSource = new MatTableDataSource<any>([]);
 
   constructor(private route: ActivatedRoute, private http: HttpClient) {}

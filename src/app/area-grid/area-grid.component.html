@@ -1,4 +1,4 @@
-<section class="area-grid" *ngIf="gridView">
+<section class="area-grid" *ngIf="isVisible">
   <div *ngFor="let project of jsonData" [routerLink]="['/project', project.id]">
     <div class="area-grid__item">
       <div class="area-grid__item-image-container">

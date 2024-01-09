@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-area-grid',
@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './area-grid.component.css',
 })
 export class AreaGridComponent {
+  @Input() jsonData: any[] = [];
+  @Input() isVisible: boolean = false;
+
   redirectToGitHub(githubLink: string): void {
     window.location.href = githubLink;
   }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-area-list',
@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './area-list.component.css',
 })
 export class AreaListComponent {
+  @Input() jsonData: any[] = [];
+  @Input() isVisible: boolean = false;
+
   redirectToGitHub(githubLink: string): void {
     window.location.href = githubLink;
   }

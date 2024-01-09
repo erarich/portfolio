@@ -18,7 +18,10 @@
     </div>
   </div>
 
-  <app-area-list />
-  <app-area-table />
-  <app-area-grid />
+  <app-area-list [jsonData]="jsonData" [isVisible]="listView"></app-area-list>
+  <app-area-table
+    [dataSource]="dataSource"
+    [isVisible]="tableView"
+  ></app-area-table>
+  <app-area-grid [jsonData]="jsonData" [isVisible]="gridView"></app-area-grid>
 </main>
