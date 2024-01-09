@@ -1,1 +1,55 @@
-<p>area-list works!</p>
+<section class="area-list" *ngIf="listView">
+  <div
+    [routerLink]="['/project', project.id]"
+    class="area-list__item"
+    *ngFor="let project of jsonData"
+  >
+    <div class="area-list__item-image-container">
+      <img [src]="project.image" alt="Project Image" />
+    </div>
+    <div class="area-list__item-container">
+      <div class="area-list__item-info">
+        <div style="display: flex; flex-direction: column">
+          <h3>{{ project.title }}</h3>
+          <div>
+            <ul>
+              <li *ngFor="let technology of project.technologies">
+                {{ technology }}
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <p style="font-color: lightgray; font-size: 10px">
+            <span style="font-weight: bold; font-size: 12px">Created at:</span>
+            {{ project.created_at }}
+          </p>
+          <p style="font-color: lightgray; font-size: 10px">
+            <span style="font-weight: bold; font-size: 12px">Last commit:</span>
+            {{ project.created_at }}
+          </p>
+        </div>
+      </div>
+      <div class="area-list__item-buttons">
+        <button
+          mat-fab
+          extended
+          (click)="redirectToGitHub(project.github)"
+          color="primary"
+        >
+          <mat-icon>code</mat-icon>
+          GitHub
+        </button>
+        <button
+          mat-fab
+          extended
+          (click)="redirectToDemo(project.demo)"
+          color="primary"
+        >
+          <mat-icon>link</mat-icon>
+          Demo
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
