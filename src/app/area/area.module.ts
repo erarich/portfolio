@@ -10,6 +10,10 @@ import { MatSelectModule } from '@angular/material/select';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { MatTableModule } from '@angular/material/table';
 
+import { AreaGridModule } from '../area-grid/area-grid.module';
+import { AreaListModule } from '../area-list/area-list.module';
+import { AreaTableModule } from '../area-table/area-table.module';
+
 @NgModule({
   declarations: [AreaComponent],
   imports: [
@@ -23,6 +27,9 @@ import { MatTableModule } from '@angular/material/table';
     RouterLink,
     RouterLinkActive,
     MatTableModule,
+    AreaGridModule,
+    AreaListModule,
+    AreaTableModule,
   ],
   exports: [AreaComponent],
 })
