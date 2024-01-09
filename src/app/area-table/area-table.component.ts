@@ -5,4 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './area-table.component.html',
   styleUrl: './area-table.component.css',
 })
-export class AreaTableComponent {}
+export class AreaTableComponent {
+  redirectToGitHub(githubLink: string): void {
+    window.location.href = githubLink;
+  }
+
+  redirectToDemo(demoLink: string): void {
+    window.location.href = demoLink;
+  }
+}

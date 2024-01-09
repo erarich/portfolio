@@ -5,4 +5,12 @@ import { Component } from '@angular/core';
   templateUrl: './area-grid.component.html',
   styleUrl: './area-grid.component.css',
 })
-export class AreaGridComponent {}
+export class AreaGridComponent {
+  redirectToGitHub(githubLink: string): void {
+    window.location.href = githubLink;
+  }
+
+  redirectToDemo(demoLink: string): void {
+    window.location.href = demoLink;
+  }
+}

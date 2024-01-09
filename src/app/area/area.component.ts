@@ -21,44 +21,12 @@ export class AreaComponent implements OnInit {
   value: any;
   modeSelect: any;
 
-  sort: string[] = [
-    'Id',
-    'Name',
-    'Last Created (todo)',
-    'Last Commit (todo)',
-    'First Created (todo)',
-  ];
-
-  language: string[] = [
-    'Python',
-    'JavaScript',
-    'TypeScript',
-    'HTML',
-    'CSS',
-    'GDScript',
-  ];
-
-  framework: string[] = [
-    'React',
-    'Angular',
-    'Godot',
-    'Angular',
-    'Streamlit',
-    'Express',
-  ];
-
   viewOptions: string[] = ['List', 'Grid', 'Table'];
 
-  sortSelect!: string;
-  languageSelect: any[] = [];
-  frameworkSelect: any[] = [];
   viewSelect: string = 'List';
-  filteredData: any[] = [];
   listView: boolean = false;
   tableView: boolean = false;
   gridView: boolean = false;
-
-  teste: boolean = false;
 
   displayedColumns: string[] = [
     'title',
@@ -92,18 +60,6 @@ export class AreaComponent implements OnInit {
         }
       );
     });
-  }
-
-  redirectToGitHub(githubLink: string): void {
-    window.location.href = githubLink;
-  }
-
-  redirectToDemo(demoLink: string): void {
-    window.location.href = demoLink;
-  }
-
-  loadAreaData() {
-    console.log('Carregando dados para a área: ', this.areaType);
   }
 
   onViewSelectChange() {
