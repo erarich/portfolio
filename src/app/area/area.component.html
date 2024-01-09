@@ -4,33 +4,6 @@
     <p>{{ jsonData.length }} projects.</p>
     <mat-divider></mat-divider>
     <div class="area-container__filter">
-      <div style="display: flex; flex-direction: row; gap: 20px">
-        <mat-select [(value)]="sortSelect" placeholder="Sort">
-          <mat-option *ngFor="let option of sort" [value]="option">{{
-            option
-          }}</mat-option>
-        </mat-select>
-        <mat-select
-          [(value)]="languageSelect"
-          (selectionChange)="onFilterChange()"
-          placeholder="Language"
-          multiple
-        >
-          <mat-option *ngFor="let option of language" [value]="option">{{
-            option
-          }}</mat-option>
-        </mat-select>
-        <mat-select
-          [(value)]="frameworkSelect"
-          placeholder="Framework"
-          (selectionChange)="onFilterChange()"
-          multiple
-        >
-          <mat-option *ngFor="let option of framework" [value]="option">{{
-            option
-          }}</mat-option>
-        </mat-select>
-      </div>
       <div>
         <mat-select
           [(value)]="viewSelect"
