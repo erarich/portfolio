@@ -106,28 +106,6 @@ export class AreaComponent implements OnInit {
     console.log('Carregando dados para a área: ', this.areaType);
   }
 
-  filterProjects() {
-    // Filter projects based on selected language and framework
-    this.filteredData = this.jsonData.filter((project: any) => {
-      const hasSelectedLanguage =
-        this.languageSelect.length === 0 ||
-        this.languageSelect.some((lang: string) =>
-          project.technologies.includes(lang)
-        );
-      const hasSelectedFramework =
-        this.frameworkSelect.length === 0 ||
-        this.frameworkSelect.some((framework: string) =>
-          project.technologies.includes(framework)
-        );
-
-      return hasSelectedLanguage && hasSelectedFramework;
-    });
-  }
-
-  onFilterChange() {
-    this.filterProjects();
-  }
-
   onViewSelectChange() {
     switch (this.viewSelect) {
       case 'List':
