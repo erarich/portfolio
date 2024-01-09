@@ -107,8 +107,6 @@
 
   <section class="area-table" *ngIf="tableView">
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      <!-- Define your columns based on the structure of your jsonData -->
-
       <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef>Title</th>
         <td mat-cell *matCellDef="let element">{{ element.title }}</td>
