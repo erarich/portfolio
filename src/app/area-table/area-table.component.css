@@ -1,0 +1,11 @@
+.area-table {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.area-table tr:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
