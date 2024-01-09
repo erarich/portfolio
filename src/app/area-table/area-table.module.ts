@@ -26,4 +26,4 @@ import { MatTableModule } from '@angular/material/table';
   ],
   exports: [AreaTableComponent],
 })
-export class AreaModule {}
+export class AreaTableModule {}

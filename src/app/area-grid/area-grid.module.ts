@@ -26,4 +26,4 @@ import { MatTableModule } from '@angular/material/table';
   ],
   exports: [AreaGridComponent],
 })
-export class AreaModule {}
+export class AreaGridModule {}
