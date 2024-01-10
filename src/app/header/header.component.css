@@ -1,12 +1,20 @@
-header {
-  background-color: #333;
-  color: rgb(243, 243, 193);
+.header {
+  background-color: rgba(137, 43, 226, 0.337);
+  color: #333;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-left: 60px;
   padding-right: 60px;
+}
+
+.header:hover {
+  background-color: #333;
+}
+
+.header:hover * {
+  color: white;
 }
 
 .header__logo :hover {
@@ -16,7 +24,7 @@ header {
 .header__logo a {
   font-size: 1.5em;
   text-decoration: none;
-  color: rgb(243, 243, 193);
+  color: #333;
   cursor: pointer;
 }
 
@@ -25,7 +33,7 @@ header {
 }
 
 .header__nav a {
-  color: rgb(243, 243, 193);
+  color: #333;
   text-decoration: none;
   padding: 10px;
   margin: 0 5px;
