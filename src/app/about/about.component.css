@@ -1,5 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitter:wght@500&family=Reem+Kufi:wght@600&display=swap");
+
 .about {
-  height: 400px;
-  text-align: center;
   background-color: beige;
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.about h1 {
+  text-transform: uppercase;
+  padding-top: 20px;;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+}
+}
+
+.about-content {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.about-content strong {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.about-content span {
+  display: block;
+  margin-bottom: 8px;
 }
