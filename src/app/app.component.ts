@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { AreaModule } from './area/area.module';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+import { HeaderComponent } from './shared/layout/header/header.component';
+import { FooterComponent } from './shared/layout/footer/footer.component';
+import { AreaModule } from './home/pages/area/area.module';
 
 @Component({
   selector: 'app-root',

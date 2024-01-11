@@ -1,10 +1,11 @@
 import { Routes, Router } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AreaComponent } from './area/area.component';
-import { NotfoundComponent } from './notfound/notfound.component';
-import { areaGuard } from './area.guard';
-import { projectGuard } from './project.guard';
-import { ProjectComponent } from './project/project.component';
+
+import { HomeComponent } from './home/pages/home/home.component';
+import { AreaComponent } from './home/pages/area/area.component';
+import { NotfoundComponent } from './home/pages/notfound/notfound.component';
+import { areaGuard } from './home/pages/area/area.guard';
+import { projectGuard } from './home/pages/project/project.guard';
+import { ProjectComponent } from './home/pages/project/project.component';
 
 export const routes: Routes = [
   {
