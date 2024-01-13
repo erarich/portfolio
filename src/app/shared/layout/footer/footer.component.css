@@ -4,4 +4,6 @@ footer {
   background-color: #333;
   color: rgb(243, 243, 193);
   padding: 10px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
