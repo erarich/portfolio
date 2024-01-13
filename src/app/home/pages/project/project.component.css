@@ -1,0 +1,14 @@
+.project {
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.project h1 {
+  text-transform: uppercase;
+  padding-top: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22px;
+}
